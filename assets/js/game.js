@@ -63,11 +63,11 @@ const iatime = (minPoints) => {
     (pjpoints > 21 && pcpoints <= 21) ||
     (pjpoints < 21 && pjpoints < pcpoints && pcpoints <= 21)
   ) {
-    document.querySelector("header").innerText = "You lost the game";
+    document.querySelector("header").innerText = "You lost";
   } else if (pjpoints == pcpoints) {
-    document.querySelector("header").innerText = "No one win the game!";
+    document.querySelector("header").innerText = "No one win!";
   } else {
-    document.querySelector("header").innerText = "You win the game";
+    document.querySelector("header").innerText = "You win";
   }
 };
 
