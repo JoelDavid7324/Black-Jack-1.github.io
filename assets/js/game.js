@@ -105,17 +105,17 @@ btn_nCard.addEventListener("click", function () {
     if (pjpoints > 21) {
       btn_nCard.disabled = true;
       btn_stop.disabled = true;
-      iatime(pjpoints);
+      setInterval(iatime(pjpoints), 1000);
     } else if (pjpoints == 21) {
       btn_nCard.disabled = true;
       btn_stop.disabled = true;
-      iatime(pjpoints);
+      setInterval(iatime(pjpoints), 1000);
     }
   }
 });
 
 btn_stop.addEventListener("click", function () {
-  iatime(pjpoints);
+  setInterval(iatime(pjpoints), 1000);
   btn_nCard.disabled = true;
   btn_stop.disabled = true;
 });
