@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+html{
+  overflow: hidden;
+}
+:root {
+  --background__color: #107639;
+  --title__shadow: 2px 1px 1px #000000;
+}
+body {
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--background__color);
+  width: 90vw;
+  min-height: 100vh;
+  min-width: 320px;
+}
+
+.header {
+  width: 80vw;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 35px;
+  color: #ffffff;
+  text-shadow: var(--title__shadow);
+  user-select: none;
+}
+
+.div__controls {
+  max-width: 300px;
+  width: 70%;
+  display: flex;
+  margin-top: 5px;
+  padding: 0.1px;
+  margin-left: 10px;
+  
+}
+.control {
+  height: 25px;
+  margin: 5px 4px;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  border-style: none;
+  border-radius: 5px;
+  background-color: #4261da;
+  color: #ffffff;
+  text-shadow: 2px 1px 2px #000000;
+  box-shadow: inset 0.5px 0.5px 2px 0px #ffffff, 1px 1px 4px 1px #000000;
+  transition: all 0.2s;
+  cursor:pointer;
+}
+.control:hover {
+  border-radius: 6px;
+  box-shadow: inset 0.5px 0.5px 2px 0px #ffffff, 1px 1px 6px 1px #000000;
+}
+.control:active {
+  background-color: rgb(110, 131, 214);
+}
+.div__controls :nth-child(3) {
+  background-color: #dd0303;
+}
+.div__controls :nth-child(3):active{
+  background-color: #d84949;
+}
+.player,
+.computer {
+  padding-top: 0.1px;
+  margin-top: 10px;
+  text-align: start;
+  color: #ffffff;
+  font-size: small;
+  text-shadow: var(--title__shadow);
+  height: 180px;
+  padding-left: 10px;
+  user-select: none;
+}
+.pictures,
+.picturesCom {
+  margin-top: 8px;
+  width: 100px;
+  display: flex;
+}
+.card,
+.cardCom {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  left: 50px;
+  margin-left: -50px;
+}
+
+.card:nth-child(1),
+.cardCom:nth-child(1) {
+  margin-left: -100;
+}
+
+@media (max-width: 321px) {
+  .div__controls{
+    width: 83%;
+  }
+}
